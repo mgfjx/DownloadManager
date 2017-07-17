@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8B9CEC98026E33F1BF654B /* libPods-DownloadManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE099FF135D2157E58EA7117 /* libPods-DownloadManager.a */; };
 		EC4027C91F1C93BB008BFE37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027C81F1C93BB008BFE37 /* main.m */; };
 		EC4027CC1F1C93BB008BFE37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027CB1F1C93BB008BFE37 /* AppDelegate.m */; };
 		EC4027CF1F1C93BB008BFE37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027CE1F1C93BB008BFE37 /* ViewController.m */; };
 		EC4027D21F1C93BB008BFE37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4027D01F1C93BB008BFE37 /* Main.storyboard */; };
 		EC4027D41F1C93BB008BFE37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4027D31F1C93BB008BFE37 /* Assets.xcassets */; };
 		EC4027D71F1C93BB008BFE37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4027D51F1C93BB008BFE37 /* LaunchScreen.storyboard */; };
+		EC4027E31F1C945A008BFE37 /* MultiTaskDownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027E01F1C945A008BFE37 /* MultiTaskDownloadCell.m */; };
+		EC4027E41F1C945A008BFE37 /* MultiTaskDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027E21F1C945A008BFE37 /* MultiTaskDownloadController.m */; };
+		EC4027E81F1C9466008BFE37 /* pasue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC4027E61F1C9466008BFE37 /* pasue.jpg */; };
+		EC4027E91F1C9466008BFE37 /* play.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC4027E71F1C9466008BFE37 /* play.jpg */; };
+		EC4027EF1F1C946C008BFE37 /* XTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027EC1F1C946C008BFE37 /* XTask.m */; };
+		EC4027F01F1C946C008BFE37 /* XTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027EE1F1C946C008BFE37 /* XTaskManager.m */; };
+		EC4027F31F1CAD44008BFE37 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4027F21F1CAD44008BFE37 /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701C605F5256D1E2A0738870 /* Pods-DownloadManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager.debug.xcconfig"; sourceTree = "<group>"; };
 		EC4027C41F1C93BB008BFE37 /* DownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4027C81F1C93BB008BFE37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC4027CA1F1C93BB008BFE37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +35,20 @@
 		EC4027D31F1C93BB008BFE37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4027D61F1C93BB008BFE37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4027D81F1C93BB008BFE37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC4027DF1F1C945A008BFE37 /* MultiTaskDownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTaskDownloadCell.h; sourceTree = "<group>"; };
+		EC4027E01F1C945A008BFE37 /* MultiTaskDownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTaskDownloadCell.m; sourceTree = "<group>"; };
+		EC4027E11F1C945A008BFE37 /* MultiTaskDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTaskDownloadController.h; sourceTree = "<group>"; };
+		EC4027E21F1C945A008BFE37 /* MultiTaskDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTaskDownloadController.m; sourceTree = "<group>"; };
+		EC4027E61F1C9466008BFE37 /* pasue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pasue.jpg; sourceTree = "<group>"; };
+		EC4027E71F1C9466008BFE37 /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
+		EC4027EB1F1C946C008BFE37 /* XTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTask.h; sourceTree = "<group>"; };
+		EC4027EC1F1C946C008BFE37 /* XTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTask.m; sourceTree = "<group>"; };
+		EC4027ED1F1C946C008BFE37 /* XTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTaskManager.h; sourceTree = "<group>"; };
+		EC4027EE1F1C946C008BFE37 /* XTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTaskManager.m; sourceTree = "<group>"; };
+		EC4027F11F1CAD44008BFE37 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		EC4027F21F1CAD44008BFE37 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		EDD7896AEF81D3E3D1145EDE /* Pods-DownloadManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager.release.xcconfig"; sourceTree = "<group>"; };
+		FE099FF135D2157E58EA7117 /* libPods-DownloadManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DownloadManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8B9CEC98026E33F1BF654B /* libPods-DownloadManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A92272A577CE70E5D4C36CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				701C605F5256D1E2A0738870 /* Pods-DownloadManager.debug.xcconfig */,
+				EDD7896AEF81D3E3D1145EDE /* Pods-DownloadManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C99CAA6E3D66C5472378F64F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE099FF135D2157E58EA7117 /* libPods-DownloadManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC4027BB1F1C93BB008BFE37 = {
 			isa = PBXGroup;
 			children = (
 				EC4027C61F1C93BB008BFE37 /* DownloadManager */,
 				EC4027C51F1C93BB008BFE37 /* Products */,
+				A92272A577CE70E5D4C36CE3 /* Pods */,
+				C99CAA6E3D66C5472378F64F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +101,9 @@
 		EC4027C61F1C93BB008BFE37 /* DownloadManager */ = {
 			isa = PBXGroup;
 			children = (
+				EC4027EA1F1C946C008BFE37 /* DownloadManager */,
+				EC4027E51F1C9466008BFE37 /* Source */,
+				EC4027DE1F1C945A008BFE37 /* Classes */,
 				EC4027CA1F1C93BB008BFE37 /* AppDelegate.h */,
 				EC4027CB1F1C93BB008BFE37 /* AppDelegate.m */,
 				EC4027CD1F1C93BB008BFE37 /* ViewController.h */,
@@ -79,6 +125,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EC4027DE1F1C945A008BFE37 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC4027DF1F1C945A008BFE37 /* MultiTaskDownloadCell.h */,
+				EC4027E01F1C945A008BFE37 /* MultiTaskDownloadCell.m */,
+				EC4027E11F1C945A008BFE37 /* MultiTaskDownloadController.h */,
+				EC4027E21F1C945A008BFE37 /* MultiTaskDownloadController.m */,
+				EC4027F11F1CAD44008BFE37 /* UIColor+Hex.h */,
+				EC4027F21F1CAD44008BFE37 /* UIColor+Hex.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EC4027E51F1C9466008BFE37 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EC4027E61F1C9466008BFE37 /* pasue.jpg */,
+				EC4027E71F1C9466008BFE37 /* play.jpg */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EC4027EA1F1C946C008BFE37 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				EC4027EB1F1C946C008BFE37 /* XTask.h */,
+				EC4027EC1F1C946C008BFE37 /* XTask.m */,
+				EC4027ED1F1C946C008BFE37 /* XTaskManager.h */,
+				EC4027EE1F1C946C008BFE37 /* XTaskManager.m */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC4027DB1F1C93BB008BFE37 /* Build configuration list for PBXNativeTarget "DownloadManager" */;
 			buildPhases = (
+				FCD94C507A159E212FB2B23D /* [CP] Check Pods Manifest.lock */,
 				EC4027C01F1C93BB008BFE37 /* Sources */,
 				EC4027C11F1C93BB008BFE37 /* Frameworks */,
 				EC4027C21F1C93BB008BFE37 /* Resources */,
+				39A881A0CEA0EC40A0D99792 /* [CP] Embed Pods Frameworks */,
+				AFA4D2CCA7122BF5192DA456 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,19 +221,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4027D71F1C93BB008BFE37 /* LaunchScreen.storyboard in Resources */,
+				EC4027E91F1C9466008BFE37 /* play.jpg in Resources */,
 				EC4027D41F1C93BB008BFE37 /* Assets.xcassets in Resources */,
+				EC4027E81F1C9466008BFE37 /* pasue.jpg in Resources */,
 				EC4027D21F1C93BB008BFE37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39A881A0CEA0EC40A0D99792 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA4D2CCA7122BF5192DA456 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD94C507A159E212FB2B23D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC4027C01F1C93BB008BFE37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4027E31F1C945A008BFE37 /* MultiTaskDownloadCell.m in Sources */,
+				EC4027E41F1C945A008BFE37 /* MultiTaskDownloadController.m in Sources */,
 				EC4027CF1F1C93BB008BFE37 /* ViewController.m in Sources */,
+				EC4027F01F1C946C008BFE37 /* XTaskManager.m in Sources */,
+				EC4027EF1F1C946C008BFE37 /* XTask.m in Sources */,
+				EC4027F31F1CAD44008BFE37 /* UIColor+Hex.m in Sources */,
 				EC4027CC1F1C93BB008BFE37 /* AppDelegate.m in Sources */,
 				EC4027C91F1C93BB008BFE37 /* main.m in Sources */,
 			);
@@ -273,10 +410,12 @@
 		};
 		EC4027DC1F1C93BB008BFE37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 701C605F5256D1E2A0738870 /* Pods-DownloadManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4H95452AGN;
 				INFOPLIST_FILE = DownloadManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiexiaolong.DownloadManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,10 +424,12 @@
 		};
 		EC4027DD1F1C93BB008BFE37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD7896AEF81D3E3D1145EDE /* Pods-DownloadManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4H95452AGN;
 				INFOPLIST_FILE = DownloadManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiexiaolong.DownloadManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,6 +455,7 @@
 				EC4027DD1F1C93BB008BFE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
