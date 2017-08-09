@@ -22,8 +22,35 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    titles = @[@"m",@"yuenv",@"live-Avril-Lavigne"];
+    titles = @[@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",@"m",@"yuenv",@"live-Avril-Lavigne",];
     urls = @[
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
+             @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
              @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/m.mp4",
              @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/yuenv.mp4",
              @"https://raw.githubusercontent.com/mgfjxxiexiaolong/DataSource/master/Video/live-Avril-Lavigne.mp4",
@@ -44,19 +71,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *identifier = @"cell";
-//    MultiTaskDownloadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    MultiTaskDownloadCell *cell = nil;
+    MultiTaskDownloadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    MultiTaskDownloadCell *cell = nil;
     
-//    if (!cell) {
+    if (!cell) {
         cell = [[MultiTaskDownloadCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-//    }
-    
+    }
+
     cell.titleLabel.text = titles[indexPath.row];
     cell.subLable.text = urls[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-//    cell.downloadTask = [XTaskManager manager].tasksList[indexPath.row];
-//    cell.delegate = self;
     cell.tag = indexPath.row;
     
     return cell;
@@ -81,9 +106,9 @@
 }
 
 - (void)onTaskFinished:(NSInteger)tag{
-    
+    __weak typeof(self) weakself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
+        [weakself.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
     });
     
 }

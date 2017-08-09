@@ -53,7 +53,7 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"获取" forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:13];
-        btn.layer.cornerRadius = 5;
+        btn.layer.cornerRadius = 4;
         btn.layer.borderColor = commonColor.CGColor;
         btn.layer.borderWidth = 1.5;
         [btn setTitleColor:commonColor forState:UIControlStateNormal];
@@ -84,10 +84,17 @@
 }
 
 - (void)progressStop:(UIButton *)sender{
-    _getBtn.hidden = NO;
-    _progressView.hidden = YES;
-    _progressView.progress = 0.0;
-    [_downloadTask deleteTask];
+//    _getBtn.hidden = NO;
+//    _progressView.hidden = YES;
+//    _progressView.progress = 0.0;
+//    [_downloadTask deleteTask];
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [_downloadTask pasueTask];
+    }else{
+        [_downloadTask restartTask];
+    }
+    
 }
 
 - (void)downloadBtnClicked:(UIButton *)sender{
@@ -151,7 +158,7 @@
 - (void)onGetDownloadReceivedData:(int64_t)recrived totalData:(int64_t)total{
     
     _progressView.progress = (float)recrived/total;
-//    contentLabel.text = [NSString stringWithFormat:@"%.2fm/%.2fm",(float)recrived/1000000,(float)total/1000000];
+    _subLable.text = [NSString stringWithFormat:@"%.2fm/%.2fm",(float)recrived/1000000,(float)total/1000000];
     
 }
 

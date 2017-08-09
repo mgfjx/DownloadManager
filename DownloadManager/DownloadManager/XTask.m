@@ -7,7 +7,6 @@
 //
 
 #import "XTask.h"
-#import <objc/runtime.h>
 
 @interface XTask ()<NSURLSessionDelegate>
 
@@ -99,10 +98,11 @@
     NSMutableURLRequest *headRequest = [NSMutableURLRequest requestWithURL:url];
     headRequest.HTTPMethod = @"HEAD";
     
+    __weak typeof(self) weakself = self;
+    
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:headRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"thread: %@",[NSThread currentThread]);
         if (error) {
-            [self deleteTask];
+            [weakself deleteTask];
             return ;
         }
         _totalSize = response.expectedContentLength;
@@ -111,12 +111,12 @@
             _relativePath = [_relativePath stringByAppendingPathComponent:_fileName];
         }
         
-        if (self.delegate && [self.delegate respondsToSelector:@selector(onTaskBeginDownload:)]) {
+        if (weakself.delegate && [weakself.delegate respondsToSelector:@selector(onTaskBeginDownload:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.delegate onTaskBeginDownload:self];
+                [weakself.delegate onTaskBeginDownload:weakself];
             });
         }
-        [self initTaskWith:response.URL];
+        [weakself initTaskWith:response.URL];
     }];
     self.task = task;
     
@@ -193,12 +193,13 @@
 - (void)setupDownloadSpeed{
     
     _speed = _speedSizeEveSec/1000.0;
-//    NSLog(@"网速:%f/s",self.speed);
-//    NSLog(@"进度: %f", _percentage);
+    NSLog(@"网速:%f/s",self.speed);
+    //    NSLog(@"进度: %f", _percentage);
     _speedSizeEveSec = 0;
+    __weak typeof(self) weakself = self;
     if (self.delegate && [self.delegate respondsToSelector:@selector(onGetDownloadSpeed:)]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.delegate onGetDownloadSpeed:self.speed];
+            [weakself.delegate onGetDownloadSpeed:self.speed];
         });
     }
     
@@ -209,16 +210,16 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
     if (!error) {
         _state = XDownloadTaskStateDone;
-        
+        __weak typeof(self) weakself = self;
         if (self.delegate && [self.delegate respondsToSelector:@selector(onTaskModelDidFinished:)]) {
-            [self.delegate onTaskModelDidFinished:self];
+            [self.delegate onTaskModelDidFinished:weakself];
         }
         NSLog(@"视频下载完成");
         [session finishTasksAndInvalidate];//完成任务一定要调用，否则会内存泄露
         [[NSNotificationCenter defaultCenter] postNotificationName:XTASKFINISHDOWNLOAD object:self];
     }else{
         _state = XDownloadTaskStateFaild;
-//        [session invalidateAndCancel];
+        //        [session invalidateAndCancel];
     }
     
     [_timer invalidate];
@@ -232,8 +233,9 @@
     _speedSizeEveSec += data.length;
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(onGetDownloadReceivedData:totalData:)]) {
+        __weak typeof(self) weakself = self;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.delegate onGetDownloadReceivedData:self.location totalData:_totalSize];
+            [weakself.delegate onGetDownloadReceivedData:weakself.location totalData:_totalSize];
         });
     }
     
